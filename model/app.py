@@ -2,14 +2,18 @@
 import streamlit as st
 import pandas as pd
 import joblib
-
+import os
 
 # ================================
 # Load Trained Model
 # ================================
+
 @st.cache_resource
 def load_model():
-    return joblib.load('final_model.pkl')
+    current_dir = os.path.dirname(__file__)
+    model_path = os.path.join(current_dir, 'final_model.pkl')
+    return joblib.load(model_path)
+
 
 model = load_model()
 
