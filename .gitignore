@@ -1,0 +1,12 @@
+# Virtual environment folders
+venv/
+terr_venv/
+.env/
+ENV/
+env/
+
+# Python cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
